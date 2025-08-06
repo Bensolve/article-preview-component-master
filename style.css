@@ -1,0 +1,324 @@
+/* Import Manrope font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+/* Root Variables */
+:root {
+    /* Colors */
+    --clr-dark-blue: hsl(217, 19%, 35%);
+    --clr-desaturated-blue: hsl(214, 17%, 51%);
+    --clr-grayish-blue: hsl(212, 23%, 69%);
+    --clr-light-blue: hsl(210, 46%, 95%);
+
+    /* Typography */
+    --ff-base: 'Manrope', sans-serif;
+    --fs-body: 13px;
+
+    /* Font Weights */
+    --fw-medium: 500;
+    --fw-bold: 700;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Typography & Layout */
+body {
+    font-family: var(--ff-base);
+    font-size: var(--fs-body);
+    background-color: var(--clr-light-blue);
+    color: var(--clr-dark-blue);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.preview-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    /* overflow: hidden; */
+    max-width: 375px;
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+/* Preview image container (optional) */
+.preview-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Image already handled globally, but you can add specific corner radius if needed */
+.preview-image img {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.preview-content {
+    padding-inline: 1.5rem;
+    padding-block: 1.5rem 1rem;
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.preview-title {
+    font-size: 1.25rem;
+    /* ~20px */
+    font-weight: 700;
+    color: var(--clr-dark-blue);
+    /* from your variables */
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.preview-description {
+    font-size: 0.9375rem;
+    /* ~15px */
+    color: var(--clr-grayish-blue);
+    line-height: 1.6;
+}
+
+.preview-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* border: 2px solid red; */
+
+    /* ADD THIS */
+    z-index: 1;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-weight: 700;
+    font-size: 0.875rem;
+    /* ~14px */
+    color: var(--clr-dark-blue);
+}
+
+.publish-date {
+    font-size: 0.8125rem;
+    /* ~13px */
+    color: var(--clr-grayish-blue);
+}
+
+.share-wrapper {
+
+    /* so share-panel can be absolutely positioned */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+
+}
+
+.share-button {
+    background-color: var(--clr-light-blue);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.share-button:hover {
+    background-color: var(--clr-grayish-blue);
+}
+
+.share-button:focus-visible {
+    outline: 2px solid var(--clr-dark-blue);
+}
+
+
+
+/* Share panel is hidden by default */
+.share-panel {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+
+    /* Full width of footer */
+    height: 10%;
+    /* Full height of footer */
+    border-radius: 0;
+    /* Remove rounding for full cover */
+    padding: 1rem;
+    background-color: var(--clr-dark-blue);
+
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    display: none;
+    color: white;
+    box-shadow: none;
+    /* Optional: remove shadow if you want flat overlay */
+}
+
+.share-content {
+    display: flex;
+    gap: 1rem;
+    /* align-items: center;
+    justify-content: center; */
+
+
+}
+
+
+/* Toggle the panel with a class */
+.share-wrapper.active .share-panel {
+    display: flex;
+}
+
+.share-label {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: var(--clr-grayish-blue);
+}
+
+.share-icons {
+    display: flex;
+    gap: 1rem;
+    /* or adjust as needed */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Share icons inside panel */
+.share-icons a img {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.attribution {
+    font-size: 0.75rem;
+    /* ~12px */
+    text-align: center;
+    color: var(--clr-grayish-blue);
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.attribution a {
+    color: var(--clr-dark-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+    color: var(--clr-desaturated-blue);
+    text-decoration: underline;
+}
+
+/* Responsive horizontal layout on desktop */
+@media (min-width: 768px) {
+
+    .preview-card {
+        display: flex;
+        ;
+        max-width: 700px;
+    }
+
+    .preview-image {
+        flex: 1 1 40%;
+    }
+
+    .preview-image img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.75rem 0 0 0.75rem;
+    }
+
+    .preview-content {
+        flex: 1 1 60%;
+        padding: 2rem;
+    }
+
+    .share-wrapper {
+        position: relative;
+    }
+
+    .share-panel {
+
+        bottom: 190%;
+        /* Sit directly above the button */
+        left: 50%;
+        /* Center horizontally */
+        transform: translateX(-50%);
+        width: 230px;
+        padding: 1.7rem;
+
+        background-color: var(--clr-dark-blue);
+        border-radius: 0.5rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        display: none;
+        /* Hidden by default; JS toggles this */
+    }
+
+    .share-panel.active {
+        display: block;
+    }
+
+    .share-panel .share-button {
+        display: none;
+    }
+
+    .share-panel .arrow {
+        position: absolute;
+        top: 100%;
+        /* attach at bottom of panel */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid var(--clr-dark-blue);
+        /* same as panel background */
+    }
+
+
+}
