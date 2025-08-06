@@ -31,12 +31,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./Screenshot%20(713).png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Bensolve/article-preview-component-master)
+- Live Site URL: [Add live site URL here](https://article-preview-template.netlify.app/)
 
 
 ## My process
@@ -46,51 +46,66 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Mobile-first design workflow
+- Desktop-first layout (structure)
+
 
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- I learned how to connect JavaScript to the DOM and manipulate elements using classList.
+- I now understand how a toggle function works — it checks if a class exists, removes it if it does, or adds it if it doesn't.
 
-To see how you can add code snippets, see below:
+- This helped me show and hide the share panel by toggling CSS classes like
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```css 
+.share-panel .active {
+  display: none; - to hide
+  display: block; - to show 
+}   
+
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+// Example toggle logic
+shareButton.addEventListener('click', () => {
+  sharePanel.classList.toggle('active'); // Add or remove the "active" class
+});
+
+
 ```
+You see how the active class is connected to the css section  .
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- Frontend Frameworks: I plan to rebuild this component using modern frameworks like React, Next.js, or Vue to practice component-based architecture, state management, and interactivity using real-world tools.
 
+- Responsive and Accessible UI: I want to refine my skills in crafting UIs that are not only responsive but also accessible, following WCAG standards and semantic HTML.
+
+- Developer Experience & Tooling: I aim to explore tools widely used by industry professionals, such as:
+
+- TypeScript for type-safe code
+
+- Tailwind CSS for utility-first styling
+
+- Git/GitHub workflows (branching, pull requests)
+
+- Testing tools like Vitest or Testing Library for component testing
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [ChatGPT by OpenAI](https://chatgpt.com/) - Helped me understand and improve the structure, accessibility, and organization of my HTML. It guided me with step-by-step explanations and feedback as I built the project.
+
+- [Meta AI on WhatsApp] - Was useful for quick clarifications and lightweight answers during the build. It helped me validate ideas and get basic assistance on the go
 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Bensolve)
+- Twitter - [@yourusername](https://x.com/Benjaminkissa1)
 
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Big thanks to ChatGPT (OpenAI) for step-by-step help in refining the code and structure for this challenge.
