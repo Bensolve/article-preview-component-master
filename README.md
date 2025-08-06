@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Bensolve/article-preview-component-master)
-- Live Site URL: [Add live site URL here](https://article-preview-template.netlify.app/)
+- Solution URL: [Github](https://github.com/Bensolve/article-preview-component-master)
+- Live Site URL: [Live Site](https://article-preview-template.netlify.app/)
 
 
 ## My process
@@ -102,8 +102,8 @@ You see how the active class is connected to the css section  .
 ## Author
 
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Bensolve)
-- Twitter - [@yourusername](https://x.com/Benjaminkissa1)
+- Frontend Mentor - [@Bensolve](https://www.frontendmentor.io/profile/Bensolve)
+- Twitter - [@Benjaminkissa1](https://x.com/Benjaminkissa1)
 
 
 ## Acknowledgments
