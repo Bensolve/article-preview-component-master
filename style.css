@@ -253,7 +253,7 @@ img {
 }
 
 /* Responsive horizontal layout on desktop */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
 
     .preview-card {
         display: flex;
